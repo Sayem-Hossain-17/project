@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="allotment.css">
+    <title>Student Allotment</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Student Allotment Form</h2>
+        <form action="allotment.php" method="post">
+            <label for="ID">Student ID:</label>
+            <input type="text" id="ID" name="ID" required>
+            <label for="roomNo">Room No:</label>
+            <input type="text" id="roomNo" name="roomNo" required>
+            <label for="checkInDate">Check-In Date:</label>
+            <input type="date" id="checkInDate" name="checkInDate" required>
+            <label for="checkOutDate">Check-Out Date:</label>
+            <input type="date" id="checkOutDate" name="checkOutDate">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

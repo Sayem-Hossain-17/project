@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 80%;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4); /* Gradient background */
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(236, 223, 223, 0.9); /* Semi-transparent white background */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            min-height: 100%; /* Ensure container stretches to full height */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            color: #333;
+            text-align: left;
+            margin-bottom: 1rem;
+            color: #4CAF50;
+        }
+        
+        h2 span {
+            color: #777;
+            padding-bottom: 20px;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the start of the container */
+            margin-top: 20px; /* Increase margin-top to push the buttons down */
+        }
+        
+        .button {
+            display: block;
+            width: calc(50% - 10px); /* Set button width to 50% of the container minus some spacing */
+            max-width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #4CAF50;
+            border-radius: 25px;
+            margin-bottom: 10px; /* Adjust margin-bottom to create some spacing between buttons */
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            padding: 0 20px;
+        }
+        
+        .button:hover {
+            background-color: #2E8B57;
+        }
+        @media (min-width: 768px) {
+            .button {
+                width: auto;
+                max-width: none;
+                margin-right: 10px; /* Increase right margin for spacing */
+                margin-bottom: 10px; /* Adjust margin-bottom for spacing */
+            }
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Portal - Hall Management</h2>
+        <span>Khulna University</span>
+        <nav>
+            <a href="student_info.php" class="button">Student info</a>
+            <a href="reviewComplain.php" class="button">Review complains</a>
+            <a href="allotment.html" class="button">Allotment</a>
+        </nav>
+        <nav>
+            <a href="seatCancel.html" class="button">Seat Cancellation</a>
+            <a href="adminData.php" class="button">Personal Info</button>
+           <a href="notice.html" class="button">Notice</a>
+        </nav>
+    </div>
+</body>
+</html>

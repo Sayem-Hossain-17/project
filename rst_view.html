@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residantial Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body, div, span {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        
+        body {
+            font-family: Arial, sans-serif; margin: 50px; 
+    padding: 20px; 
+    background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4); 
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4);
+            border-radius: 7px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            color: #333;
+            text-align: left; /* Align to the left */
+            margin-bottom: 1rem;
+            color: #292787; /* Add color to the heading */
+        }
+        
+        h2 span {
+            color: #777;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .button {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #4c75af; /* Add color to the button */
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #2E8B57; /* Darken color on hover */
+        }
+        
+        @media (min-width: 768px) {
+            nav {
+                justify-content: center;
+            }
+        
+            .button {
+                width: auto;
+                max-width: none;
+                margin-right: 1rem;
+                marginwidth: auto;
+                max-width: none;
+                margin-right: 1rem;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Portal - Hall Management</h2>
+        <span>Khulna University</span>
+        <nav>
+            <a href="complain.html" class="button">File a Complaint</a>
+            <a href="seat change.html" class="button">Apply for Seat Change</a>
+            <button onclick="redirectToStudentData()" class="button">Personal Info</button>
+        </nav>
+    </div>
+
+    <script>
+        function getUrlParameter(name) {
+            name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+
+        function redirectToStudentData() {
+            var email = getUrlParameter('Email');
+            if (email !== '') {
+                window.location.href = 'student_data.php?Email=' + encodeURIComponent(email);
+            } else {
+                alert('Email parameter is missing');
+            }
+        }
+    </script>
+</body>
+</html>

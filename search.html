@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    Enter student Id to get the student result <br>
+    <br>
+    <form action="search.php" method="GET">
+        <input type="text" name="ID" placeholder="Enter ID">
+        <button type="submit">Search</button>
+    </form>
+    <div ID="results"></div>
+
+    <script>
+        // JavaScript to update the results div with data from the server
+        function updateResults(data) {
+            document.getElementByID('results').innerHTML = data;
+        }
+    </script>
+</body>
+</html>

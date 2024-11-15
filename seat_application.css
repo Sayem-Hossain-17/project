@@ -1,0 +1,117 @@
+html, body, div, span, input, select, textarea, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4, #A8DBE6); /* Light turquoise */
+    
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4);
+    border-radius: 4px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h1 span {
+    color: #777;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+label span.required {
+    color: #f00;
+    margin-left: 0.5rem;
+}
+
+input, select, textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input[type="date"] {
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+.sbutton{ 
+    padding-left: 27rem;
+
+}
+button.submit-button {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding-left: auto;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #333;
+    border-radius: 4px;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-button:hover {
+    background-color: #555;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 3rem;
+    }
+
+    .form-group {
+        width: 48%;
+    }
+
+    .form-group:nth-child(even) {
+        float: right;
+    }
+
+    .form-group:nth-child(odd) {
+        float: left;
+    }
+
+    button.submit-button {
+        width: auto;
+        max-width: none;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
